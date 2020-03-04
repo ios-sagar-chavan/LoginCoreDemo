@@ -15,7 +15,7 @@ open class Session{
     
     open func loginRequest(email : String, password : String)-> String{
         let md5Data = MD5(string:password)
-        let request = email + password
+        let request = email + md5Data
         return request
     }
     
